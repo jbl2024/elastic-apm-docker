@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "debian/buster64"
+  config.vm.box = "bento/debian-10"
   config.vm.provider 'virtualbox' do |vb|
     vb.customize ['modifyvm', :id, '--memory', 8192]
     vb.customize ['modifyvm', :id, '--cpus', 2]
