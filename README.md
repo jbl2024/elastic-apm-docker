@@ -1,7 +1,7 @@
 # elastic-apm-docker
 Elastic APM basic setup with docker
 
-## Method 1: direct docker
+## Method 1: direct docker 
 
 ```
 $ docker-compose up 

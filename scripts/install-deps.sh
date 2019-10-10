@@ -25,3 +25,4 @@ echo vm.max_map_count=262144 > /etc/sysctl.d/vm_max_map_count.conf
 sysctl --system
 
 grep -qF 'vagrant - nofile 65536' /etc/security/limits.conf || echo 'vagrant - nofile 65536' >> /etc/security/limits.conf
+

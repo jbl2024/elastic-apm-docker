@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 9200, host: 9200
   config.vm.network "forwarded_port", guest: 5601, host: 5601
   config.vm.network "forwarded_port", guest: 8200, host: 8200
-  config.vm.provision "shell", path: "scripts/install-deps.sh", privileged: true
   config.vm.synced_folder '.', '/vagrant', owner: 'vagrant', group: 'root'
+
+  config.vm.provision "shell", path: "scripts/install-deps.sh", privileged: true
+  config.vm.provision "shell", path: "scripts/run.sh", run: 'always'
 end
